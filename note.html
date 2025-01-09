@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,24 +14,46 @@
    <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
-<header class="header">
-   
-   <section class="flex">
+   <header class="header">
 
-      <a href="home.html" class="logo">Educa.</a>
+      <section class="flex">
 
-      <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search ..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
-      </form>
+         <a href="home.html" class="logo">Share<span>Pod</span></a>
 
-      <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="search ..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">shaikh anas</h3>
+            <p class="role">studen</p>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">login</a>
+               <a href="register.html" class="option-btn">register</a>
+            </div>
+         </div>
+
+      </section>
+
+   </header>
+
+   <div class="side-bar">
+
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
       </div>
 
       <div class="profile">
@@ -38,83 +61,67 @@
          <h3 class="name">shaikh anas</h3>
          <p class="role">studen</p>
          <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.html" class="option-btn">login</a>
-            <a href="register.html" class="option-btn">register</a>
+      </div>
+
+      <nav class="navbar">
+         <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+         <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+         <a href="socials.html"><i class="fas fa-graduation-cap"></i><span>Social Hub</span></a>
+         <a href="calender.html"><i class="fas fa-graduation-cap"></i><span>calendar</span></a>
+         <a href="note.html"><i class="fas fa-graduation-cap"></i><span>Notes</span></a>
+         <a href="recource.html"><i class="fas fa-chalkboard-user"></i><span>Recources</span></a>
+         <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+      </nav>
+
+
+   </div>
+
+
+
+   <div class="container my-3">
+      <h1 class="mb-3" style="text-align: center;">Your Notes</h1>
+      <hr>
+      <div class="card shadow-lg p-3 mb-5 rounded bg-dark text-white">
+         <!-- <img src="..." class="card-img-top" alt="..."> -->
+         <div class="card-body">
+            <input class="form-control mb-2" id="addTitle" type="text" placeholder="Title">
+            <!-- <h5 class="card-title">Add a Note</h5> -->
+            <div class="form-group">
+               <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
+               <textarea class="form-control" id="addTxt" placeholder="Your Note" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary" id="addBtn">Add Note</button>
          </div>
       </div>
 
-   </section>
+      <h1 class="mt-5">Your Notes</h1>
+      <hr>
+      <div id="notes" class="row container-fluid"></div>
 
-</header>   
 
-<div class="side-bar">
-
-   <div id="close-btn">
-      <i class="fas fa-times"></i>
    </div>
 
-   <div class="profile">
-      <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">shaikh anas</h3>
-      <p class="role">studen</p>
-      <a href="profile.html" class="btn">view profile</a>
-   </div>
-
-   <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
-      <a href="social.html"><i class="fas fa-graduation-cap"></i><span>Social Hub</span></a>
-      <a href="calender.html"><i class="fas fa-graduation-cap"></i><span>calendar</span></a>
-      <a href="note.html"><i class="fas fa-graduation-cap"></i><span>Notes</span></a>
-      <a href="recource.html"><i class="fas fa-chalkboard-user"></i><span>Recources</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
-   </nav>
-
-
-</div>
 
 
 
-      <div class="container my-3">
-          <h1 class="mb-3" style="text-align: center;">Your Notes</h1>
-          <hr>
-        <div class="card shadow-lg p-3 mb-5 rounded bg-dark text-white">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-                <input class="form-control mb-2" id="addTitle" type="text" placeholder="Title">
-              <!-- <h5 class="card-title">Add a Note</h5> -->
-              <div class="form-group">
-                <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
-                <textarea class="form-control" id="addTxt" placeholder="Your Note" rows="3"></textarea>
-              </div>
-              <button class="btn btn-primary" id="addBtn">Add Note</button>
-            </div>
-          </div>
-          
-          <h1 class="mt-5">Your Notes</h1>
-          <hr>
-          <div id="notes" class="row container-fluid"></div>
+   <footer class="footer">
+      Share<span>Pod</span> <span>@2025</span> | all rights reserved!
+   </footer>
 
-          
-      </div>
-    
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+   <script src="js/note.js"></script>
 
 
-
-<footer class="footer">
-
-   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
-
-</footer>
-
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="js/note.js"></script>
-
-   
 </body>
+
 </html>

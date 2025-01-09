@@ -1,0 +1,400 @@
+/* Importing the same font family used across the project */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --main-color: #8e44ad;
+    --red: #e74c3c;
+    --orange: #f39c12;
+    --light-color: #888;
+    --light-bg: #eee;
+    --black: #2c3e50;
+    --white: #fff;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+}
+
+/* Social Hub Section Styles */
+.social-hub {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.social-hub .heading {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 2.5rem;
+    border-bottom: var(--border);
+    padding-bottom: 1.5rem;
+    text-transform: capitalize;
+}
+
+/* Layout Toggle Styles */
+.layout-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.toggle-btn {
+    background-color: var(--light-bg);
+    color: var(--black);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: all .2s linear;
+}
+
+.toggle-btn.active {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.toggle-btn i {
+    margin-right: 1rem;
+}
+
+/* Layouts */
+.layout {
+    display: none;
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.layout.active {
+    display: block;
+}
+
+/* Chat Layout */
+.chat-container {
+    display: flex;
+    height: 70vh;
+}
+
+.chat-sidebar {
+    width: 30rem;
+    border-right: var(--border);
+    padding: 2rem;
+}
+
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(70vh - 8rem);
+}
+
+.chat-user {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.chat-user:hover {
+    background-color: var(--light-bg);
+}
+
+.chat-user.active {
+    background-color: var(--main-color);
+}
+
+.chat-user.active h4,
+.chat-user.active .last-message {
+    color: var(--white);
+}
+
+.chat-user img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-user h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.last-message {
+    font-size: 1.4rem;
+    color: var(--light-color);
+}
+
+.messages-container {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 1.5rem;
+    max-width: 70%;
+}
+
+.message.sent {
+    margin-left: auto;
+}
+
+.message.received {
+    margin-right: auto;
+}
+
+.message-content {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+.sent .message-content {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+.received .message-content {
+    background-color: var(--light-bg);
+    color: var(--black);
+}
+
+.message-time {
+    font-size: 1.2rem;
+    color: var(--light-color);
+    margin-top: .5rem;
+    text-align: right;
+}
+
+.message-input {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    border-top: var(--border);
+}
+
+.message-input input {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
+.send-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    width: 5rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.send-btn:hover {
+    background-color: var(--black);
+}
+
+/* Posts Layout */
+.posts-layout .posts-container {
+    padding: 2rem;
+}
+
+.create-post {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.create-post-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.create-post-btn:hover {
+    background-color: var(--black);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.post .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .user-info img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post .user-info h4 {
+    font-size: 1.8rem;
+    color: var(--black);
+}
+
+.post .content {
+    font-size: 1.6rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.post .actions {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.6rem;
+}
+
+.post .actions button {
+    background: none;
+    border: none;
+    color: var(--main-color);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.post .actions button:hover {
+    color: var(--black);
+}
+
+/* Create Post Modal Styles */
+.create-post-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-post-modal.show {
+    display: flex;
+}
+
+.create-post-modal .modal-content {
+    background: var(--white);
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 60rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.create-post-modal .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--border);
+}
+
+.create-post-modal .modal-header h3 {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.create-post-modal .close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--light-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.create-post-modal .close-modal-btn:hover {
+    color: var(--black);
+}
+
+.create-post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.post-content-input {
+    width: 100%;
+    min-height: 15rem;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    border-radius: 1rem;
+    resize: vertical;
+    background: var(--light-bg);
+}
+
+.post-content-input:focus {
+    outline: none;
+    background: var(--white);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-post-btn {
+    align-self: flex-end;
+    background: var(--main-color);
+    color: var(--white);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.submit-post-btn:hover {
+    background: var(--black);
+    transform: scale(1.05);
+}
+
+/* Add these styles for the like button */
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.like-btn.liked i {
+    color: var(--red);
+}
+
+.like-btn i {
+    transition: color 0.2s ease;
+}
+
+.like-btn:hover i {
+    transform: scale(1.1);
+}

@@ -1,178 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta
-   name="description"
-   content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!"
-/>
-<meta
-name="keywords"
-content="calendar, events, reminders, javascript, html, css, open source coding"
-/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Stay organized with our user-friendly Calendar featuring events, reminders, and a customizable interface. Built with HTML, CSS, and JavaScript. Start scheduling today!" />
+  <meta name="keywords" content="calendar, events, reminders, javascript, html, css, open source coding" />
 
-<link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-crossorigin="anonymous"
-referrerpolicy="no-referrer"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Calender</title>
 
->
-   <title>Calender</title>
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
-   <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-
-   <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/calender.css">
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/calender.css">
 
 </head>
+
 <body>
 
-<header class="header">
-   
-   <section class="flex">
+  <header class="header">
 
-      <a href="home.html" class="logo">Educa.</a>
+    <section class="flex">
+
+      <a href="home.html" class="logo">Share<span>Pod</span></a>
 
       <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search ..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
+        <input type="text" name="search_box" required placeholder="search ..." maxlength="100">
+        <button type="submit" class="fas fa-search"></button>
       </form>
 
       <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="user-btn" class="fas fa-user"></div>
+        <div id="toggle-btn" class="fas fa-sun"></div>
       </div>
 
       <div class="profile">
-         <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">shaikh anas</h3>
-         <p class="role">studen</p>
-         <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.html" class="option-btn">login</a>
-            <a href="register.html" class="option-btn">register</a>
-         </div>
+        <img src="images/pic-1.jpg" class="image" alt="">
+        <h3 class="name">shaikh anas</h3>
+        <p class="role">studen</p>
+        <a href="profile.html" class="btn">view profile</a>
+        <div class="flex-btn">
+          <a href="login.html" class="option-btn">login</a>
+          <a href="register.html" class="option-btn">register</a>
+        </div>
       </div>
 
-   </section>
+    </section>
 
-</header>   
+  </header>
 
-<div class="side-bar">
+  <div class="side-bar">
 
-   <div id="close-btn">
+    <div id="close-btn">
       <i class="fas fa-times"></i>
-   </div>
+    </div>
 
-   <div class="profile">
+    <div class="profile">
       <img src="images/pic-1.jpg" class="image" alt="">
       <h3 class="name">shaikh anas</h3>
       <p class="role">studen</p>
       <a href="profile.html" class="btn">view profile</a>
-   </div>
+    </div>
 
-   <nav class="navbar">
+    <nav class="navbar">
       <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
       <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
-      <a href="social.html"><i class="fas fa-graduation-cap"></i><span>Social Hub</span></a>
+      <a href="socials.html"><i class="fas fa-graduation-cap"></i><span>Social Hub</span></a>
       <a href="calender.html"><i class="fas fa-graduation-cap"></i><span>calendar</span></a>
       <a href="note.html"><i class="fas fa-graduation-cap"></i><span>Notes</span></a>
       <a href="recource.html"><i class="fas fa-chalkboard-user"></i><span>Recources</span></a>
       <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
-   </nav>
+    </nav>
 
 
-</div>
+  </div>
 
-    <div class="container">
-      <div class="left">
-        <div class="calendar">
-          <div class="month">
-            <i class="fas fa-angle-left prev"></i>
-            <div class="date">december 2015</div>
-            <i class="fas fa-angle-right next"></i>
+  <div class="container">
+    <div class="left">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">december 2015</div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+        <div class="goto-today">
+          <div class="goto">
+            <input type="text" placeholder="mm/yyyy" class="date-input" />
+            <button class="goto-btn">Go</button>
           </div>
-          <div class="weekdays">
-            <div>Sun</div>
-            <div>Mon</div>
-            <div>Tue</div>
-            <div>Wed</div>
-            <div>Thu</div>
-            <div>Fri</div>
-            <div>Sat</div>
-          </div>
-          <div class="days"></div>
-          <div class="goto-today">
-            <div class="goto">
-              <input type="text" placeholder="mm/yyyy" class="date-input" />
-              <button class="goto-btn">Go</button>
-            </div>
-            <button class="today-btn">Today</button>
-          </div>
+          <button class="today-btn">Today</button>
         </div>
       </div>
-      <div class="right">
-        <div class="today-date">
-          <div class="event-day">wed</div>
-          <div class="event-date">12th december 2022</div>
-        </div>
-        <div class="events"></div>
-        <div class="add-event-wrapper">
-          <div class="add-event-header">
-            <div class="title">Add Event</div>
-            <i class="fas fa-times close"></i>
-          </div>
-          <div class="add-event-body">
-            <div class="add-event-input">
-              <input type="text" placeholder="Event Name" class="event-name" />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time From"
-                class="event-time-from"
-              />
-            </div>
-            <div class="add-event-input">
-              <input
-                type="text"
-                placeholder="Event Time To"
-                class="event-time-to"
-              />
-            </div>
-          </div>
-          <div class="add-event-footer">
-            <button class="add-event-btn">Add Event</button>
-          </div>
-        </div>
-      </div>
-      <button class="add-event">
-        <i class="fas fa-plus"></i>
-      </button>
     </div>
+    <div class="right">
+      <div class="today-date">
+        <div class="event-day">wed</div>
+        <div class="event-date">12th december 2022</div>
+      </div>
+      <div class="events"></div>
+      <div class="add-event-wrapper">
+        <div class="add-event-header">
+          <div class="title">Add Event</div>
+          <i class="fas fa-times close"></i>
+        </div>
+        <div class="add-event-body">
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Name" class="event-name" />
+          </div>
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Time From" class="event-time-from" />
+          </div>
+          <div class="add-event-input">
+            <input type="text" placeholder="Event Time To" class="event-time-to" />
+          </div>
+        </div>
+        <div class="add-event-footer">
+          <button class="add-event-btn">Add Event</button>
+        </div>
+      </div>
+    </div>
+    <button class="add-event">
+      <i class="fas fa-plus"></i>
+    </button>
+  </div>
 
 
 
 
 
-<footer class="footer">
+  <footer class="footer">
 
-   Share pod <span>@2025</span> | all rights reserved!
+    Share<span>Pod</span> <span>@2025</span> | all rights reserved!
 
-</footer>
+  </footer>
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-<script src="js/calender.js"></script>
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+  <script src="js/calender.js"></script>
 
 
-   
+
 </body>
+
 </html>

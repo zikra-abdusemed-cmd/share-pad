@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Hub</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/socials.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <section class="flex">
+            <a href="home.html" class="logo">Share<span>Pod</span></a>
+
+            <form action="search.html" method="post" class="search-form">
+                <input type="text" name="search_box" required placeholder="search ..." maxlength="100">
+                <button type="submit" class="fas fa-search"></button>
+            </form>
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="images/pic-1.jpg" class="image" alt="">
+                <h3 class="name">shaikh anas</h3>
+                <p class="role">student</p>
+                <a href="profile.html" class="btn">view profile</a>
+                <div class="flex-btn">
+                    <a href="login.html" class="option-btn">login</a>
+                    <a href="register.html" class="option-btn">register</a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <div class="side-bar">
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">shaikh anas</h3>
+            <p class="role">student</p>
+            <a href="profile.html" class="btn">view profile</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
+            <a href="socials.html"><i class="fas fa-graduation-cap"></i><span>Social Hub</span></a>
+            <a href="calender.html"><i class="fas fa-graduation-cap"></i><span>calendar</span></a>
+            <a href="note.html"><i class="fas fa-graduation-cap"></i><span>Notes</span></a>
+            <a href="recource.html"><i class="fas fa-chalkboard-user"></i><span>Recources</span></a>
+            <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+        </nav>
+    </div>
+
+    <!-- Social Hub Content Section -->
+    <section class="social-hub">
+        <h1 class="heading">Social Hub</h1>
+
+        <!-- Layout Toggle Buttons -->
+        <div class="layout-toggle">
+            <button class="toggle-btn active" data-layout="chat">
+                <i class="fas fa-comments"></i> Chat
+            </button>
+            <button class="toggle-btn" data-layout="posts">
+                <i class="fas fa-th-large"></i> Posts
+            </button>
+        </div>
+
+        <!-- Chat Layout -->
+        <div class="layout chat-layout active">
+            <div class="chat-container">
+                <!-- Left Section - Chat List -->
+                <div class="chat-sidebar">
+                    <h3>Chats</h3>
+                    <div class="chat-list">
+                        <!-- Chat users will be dynamically added here -->
+                    </div>
+                </div>
+
+                <!-- Right Section - Chat Messages -->
+                <div class="chat-main">
+                    <div class="messages-container">
+                        <div class="no-chat-selected">
+                            <i class="fas fa-comments"></i>
+                            <p>Select a chat to start messaging</p>
+                        </div>
+                    </div>
+                    <div class="message-input">
+                        <input type="text" placeholder="Type a message..." id="message-input">
+                        <button class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posts Layout -->
+        <div class="layout posts-layout">
+            <div class="posts-container">
+                <div class="create-post">
+                    <button class="create-post-btn">
+                        <i class="fas fa-plus"></i> Create New Post
+                    </button>
+                </div>
+                <div class="posts-grid">
+                    <!-- Posts will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        Share<span>Pod</span> <span>@2025</span> | all rights reserved!
+    </footer>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+    <script src="js/socials.js"></script>
+
+    <div class="create-post-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create New Post</h3>
+                <button class="close-modal-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="create-post-form">
+                <textarea class="post-content-input" placeholder="What's on your mind?"></textarea>
+                <button type="submit" class="submit-post-btn">Post</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
